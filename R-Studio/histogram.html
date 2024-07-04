@@ -90,17 +90,23 @@
         <div class="dataset">
           <h3>Simple Histogram pada R</h3>
           <p>Membuat simple histogram menggunkan parameter yang sudah disebutkan diatas.</p>
-          <pre class="tutorial">
-<code>
-    # Membuat data untuk histogram.
-    v <- c(19, 23, 11, 5, 16, 21, 32, 
-        14, 19, 27, 39, 6, 9, 17, 23, 39)
+          <div class="code-block">
+            <button class="copy-button">Copy</button>
+            <div class="code-block">
+              <button class="copy-button">Copy</button>
+              <pre>
+                <code class="language-r">
+# Membuat data untuk histogram.
+v <- c(19, 23, 11, 5, 16, 21, 32, 
+    14, 19, 27, 39, 6, 9, 17, 23, 39)
 
-    # Membuat histogram
-    hist(v, xlab = "Books",
-        col = "orange", border = "black")
-</code>
-            </pre>
+# Membuat histogram
+hist(v, xlab = "Books",
+    col = "orange", border = "black")
+                </code>
+              </pre>
+            </div>
+          </div>
           <img src="/img/histogram2.jpeg" alt="image histogram 2" />
         </div>
 
@@ -113,17 +119,23 @@
             <li>Kita juga dapat menambahkan parameter breaks untuk mengatur lebar setiap batang pada histogram.</li>
           </ol>
           <p>Lihat contoh dibawah ini</p>
-          <pre class="tutorial">
-<code>
-    # Membuat data untuk histogram.
-    v <- c(19, 23, 11, 45, 30, 49, 5, 16, 21, 32, 
-        14, 19, 27, 39, 6, 9, 17, 23, 39, 40)
+          <div class="code-block">
+            <button class="copy-button">Copy</button>
+            <div class="code-block">
+              <button class="copy-button">Copy</button>
+              <pre>
+                <code class="language-r">
+# Membuat data untuk histogram.
+v <- c(19, 23, 11, 45, 30, 49, 5, 16, 21, 32, 
+    14, 19, 27, 39, 6, 9, 17, 23, 39, 40)
 
-    # Membuat histogram
-    hist(v, xlab = "Books", col = "green", border = "black", xlim = c(0, 50),
-        ylim = c(0, 5), breaks = 5)
-</code>
-            </pre>
+# Membuat histogram
+hist(v, xlab = "Books", col = "green", border = "black", xlim = c(0, 50),
+    ylim = c(0, 5), breaks = 5)
+                </code>
+              </pre>
+            </div>
+          </div>
           <img src="/img/histogram3.jpeg" alt="image histogram 3" />
         </div>
 
@@ -131,23 +143,28 @@
         <div class="dataset">
           <h3>Membuat Histogram Mengembalikan Nilai untuk Labels</h3>
           <p>Untuk membuat histogram mengembalikan nilai dapat mengunakan fungsi <span>text()</span></p>
-          <pre class="tutorial">
-<code>
-    # Membuat data untuk histogram.
-    v <-  c(19, 23, 11, 5, 16, 21, 32, 
-        14, 19, 27, 39, 6, 9, 17, 23, 39)
+          <div class="code-block">
+            <button class="copy-button">Copy</button>
+            <div class="code-block">
+              <button class="copy-button">Copy</button>
+              <pre>
+                <code class="language-r">
+# Membuat data untuk histogram.
+v <-  c(19, 23, 11, 5, 16, 21, 32, 
+    14, 19, 27, 39, 6, 9, 17, 23, 39)
 
-    # Membuat histogram.
-    m<-hist(v, xlab = "Berat", ylab ="Frequency",
-            col = "darkmagenta", border = "pink", 
-            breaks = 5)
+# Membuat histogram.
+m<-hist(v, xlab = "Berat", ylab ="Frequency",
+        col = "darkmagenta", border = "pink", 
+        breaks = 5)
 
-    # Setting labels
-    text(m$mids, m$counts, labels = m$counts, 
-        adj = c(0.5, -0.5))
-
-</code>
-            </pre>
+# Setting labels
+text(m$mids, m$counts, labels = m$counts, 
+    adj = c(0.5, -0.5))
+                </code>
+              </pre>
+            </div>
+          </div>
           <img src="/img/histogram4.jpeg" alt="image histogram 4" />
           <p>
             Dalam kode diatas "m$mids" mengacu pada nilai tengah dari tiap interval (kelas) pada histogram yang dihasilkan dan digunkan untuk mengatur posisi horizontal pada label. Sedangkan "m$counts" mengacu pada jumlah frekuensi data di
@@ -158,20 +175,26 @@
         <div class="dataset">
           <h3>Membuat Histogram dengan Lebar Berbeda</h3>
           <p>Membuat grafik histogram lebar berbeda, dengan menggunakan parameter di atas, kami membuat histogram menggunakan lebar tidak seragam.</p>
-          <pre class="tutorial">
-<code>
-    # Membuat data untuk histogram.
-    v <- c(19, 23, 11, 5, 16, 21, 32, 14,
-        19, 27, 39, 120, 40, 70, 90)
-        
-    # Membuat Histogram
-    hist(v, xlab = "Weight", ylab ="Frequency",
-        xlim = c(50, 100),
-        col = "darkmagenta", border = "pink",
-        breaks = c(5, 55, 60, 70, 75,
-                80, 100, 140))
-</code>
-            </pre>
+          <div class="code-block">
+            <button class="copy-button">Copy</button>
+            <div class="code-block">
+              <button class="copy-button">Copy</button>
+              <pre>
+                <code class="language-r">
+# Membuat data untuk histogram.
+v <- c(19, 23, 11, 5, 16, 21, 32, 14,
+    19, 27, 39, 120, 40, 70, 90)
+    
+# Membuat Histogram
+hist(v, xlab = "Weight", ylab ="Frequency",
+    xlim = c(50, 100),
+    col = "darkmagenta", border = "pink",
+    breaks = c(5, 55, 60, 70, 75,
+            80, 100, 140))
+                </code>
+              </pre>
+            </div>
+          </div>
           <img src="/img/histogram5.jpeg" alt="image histogram 5" />
         </div>
 

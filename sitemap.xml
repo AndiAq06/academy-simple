@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<!-- Statistika -->
+<url>
+  <loc>https://academy-simple.vercel.app/statistika/index.html</loc>
+  <lastmod>2024-07-03T09:16:15+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://academy-simple.vercel.app/statistika/statistika.html</loc>
+  <lastmod>2024-07-03T09:16:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy-simple.vercel.app/statistika/parametrik_nonparametrik.html</loc>
+  <lastmod>2024-07-03T09:16:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy-simple.vercel.app/statistika/descriptive_inferensia.html</loc>
+  <lastmod>2024-07-03T09:16:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy-simple.vercel.app/statistika/sampling_error.html</loc>
+  <lastmod>2024-07-03T09:16:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy-simple.vercel.app/statistika/tipe_data.html</loc>
+  <lastmod>2024-07-03T09:16:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy-simple.vercel.app/statistika/data_primer_sekunder.html</loc>
+  <lastmod>2024-07-03T09:16:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy-simple.vercel.app/statistika/data_warehouse_lake.html</loc>
+  <lastmod>2024-07-03T09:16:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy-simple.vercel.app/statistika/penerapan_statistika.html</loc>
+  <lastmod>2024-07-03T09:16:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy-simple.vercel.app/statistika/pertanyaan_terbuka_tertutup.html</loc>
+  <lastmod>2024-07-03T09:16:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy-simple.vercel.app/statistika/histogram.html</loc>
+  <lastmod>2024-07-03T09:16:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy-simple.vercel.app/statistika/pemusatan_data.html</loc>
+  <lastmod>2024-07-03T09:16:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy-simple.vercel.app/statistika/penyebaran_data.html</loc>
+  <lastmod>2024-07-03T09:16:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy-simple.vercel.app/statistika/ukuran_distribusi.html</loc>
+  <lastmod>2024-07-03T09:16:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy-simple.vercel.app/statistika/bias_variance.html</loc>
+  <lastmod>2024-07-03T09:16:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy-simple.vercel.app/R-Studio/list_materi.html</loc>
+  <lastmod>2024-07-03T09:19:32+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+
+
+<!-- R-Studio -->
+<url>
+  <loc>https://academy-simple.vercel.app/R-Studio/barplot.html</loc>
+  <lastmod>2024-07-03T09:19:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy-simple.vercel.app/R-Studio/boxplot.html</loc>
+  <lastmod>2024-07-03T09:19:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://academy-simple.vercel.app/R-Studio/histogram.html</loc>
+  <lastmod>2024-07-03T09:19:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+</urlset>

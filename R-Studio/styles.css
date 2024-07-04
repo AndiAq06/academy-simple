@@ -78,10 +78,7 @@ header .name-web {
 }
 
 .materi ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin-left: 200px;
 }
 .materi ul li {
   margin: 10px;
@@ -597,5 +594,9 @@ h3 {
 
   .other-articles {
     display: none;
+  }
+
+  .materi ul {
+    margin-left: 50px;
   }
 }
