@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membuat Boxplot | SPSS</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a class="name-web">Simple Academy</a>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/statistika/index.html">Statistics</a></li>
+          <li><a href="/matematika/index.html">Matematics</a></li>
+          <li><a href="/sql/index.html">SQL</a></li>
+          <li><a href="/about/index.html">About</a></li>
+          <li><a href="/contact/index.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <div class="related-articles">
+        <h3>Artikel Terkait</h3>
+        <ul>
+          <li><a href="#">Memahami Konsep Dasar Statistika</a></li>
+          <li><a href="#">Penerapan Statistika dalam Berbagai Bidang</a></li>
+          <!-- Anda dapat menambahkan lebih banyak artikel terkait di sini -->
+        </ul>
+      </div>
+
+      <div class="container-box">
+        <div class="path">
+          <a href="/index.html">Home</a> <span> >> </span> <a href="/statistika/index.html">Statistics</a> <span> >> </span>
+          <a href="/statistika/parametrik_nonparametrik.html">Membuat Boxplot | SPSS</a>
+        </div>
+        <h2 class="judul">Membuat Boxplot | SPSS</h2>
+        <div class="author-info">
+          <img src="/about/foto.JPG" alt="Foto Profil Penulis" class="author-avatar" />
+          <span class="author-name">Andi Ardiansyah Nasir</span>
+          <span class="post-date">5 Juli 2024</span>
+        </div>
+
+        <div class="img">
+          <img src="/img/boxplot.jpg" alt="image" />
+        </div>
+
+        <div class="introduction">
+          <h3>Pengertian Box Plot</h3>
+          <p>
+            Boxplot atau diagram kotak merupakan salah satu jenis visualisasi data yang digunakan untuk menganalisis distribusi data serta menampilkan statistik deskriptif seperti nilai tengah, kuartil, rentang data, dan keberadaan outliers
+            (data yang ekstrem). Diciptakan pertama kali oleh John Tukey pada tahun 1969, boxplot merupakan alat yang efektif untuk memahami sebaran data secara visual.
+          </p>
+          <h4>Fungsi Boxplot</h4>
+          <ol>
+            <li>
+              <p><strong>Menunjukkan Sebaran Data:</strong> Boxplot membantu dalam menunjukkan bagaimana data tersebar secara grafis. Ini memberi gambaran visual tentang sebaran nilai-nilai data dari minimum hingga maksimum.</p>
+            </li>
+            <li>
+              <p><strong>Identifikasi Posisi Nilai Tengah:</strong> Dengan menampilkan garis di dalam kotak, boxplot memvisualisasikan nilai median (nilai tengah) dari data, yang merupakan pemisah antara kuartil pertama dan kedua.</p>
+            </li>
+            <li>
+              <p>
+                <strong>Pengukuran Kuartil dan Rentang Interkuartil:</strong> Diagram kotak memperlihatkan kuartil pertama (Q1) dan ketiga (Q3), yang membentuk kotak. Rentang interkuartil (IQR) dapat dihitung dari Q3 - Q1, menyoroti sebaran
+                data di tengah.
+              </p>
+            </li>
+            <li>
+              <p><strong>Mendeteksi Outliers:</strong> Tanda-tanda titik di luar batas atas dan bawah (whiskers) menunjukkan adanya outliers atau data yang jauh dari nilai-nilai lainnya.</p>
+            </li>
+          </ol>
+          <h4>Cara Membaca Boxplot</h4>
+          <ul>
+            <li>
+              <p><strong>Median:</strong> Garis di dalam kotak menunjukkan nilai tengah dari data.</p>
+            </li>
+            <li>
+              <p><strong>Kuartil (Q1 dan Q3):</strong> Kotak mewakili 50% tengah dari data, dengan kuartil pertama (Q1) sebagai batas bawah kotak dan kuartil ketiga (Q3) sebagai batas atas.</p>
+            </li>
+            <li>
+              <p><strong>Whiskers:</strong> Menyediakan informasi tentang sebaran data di luar kuartil. Mereka dapat menunjukkan rentang data atau batas untuk data non-outliers.</p>
+            </li>
+            <li>
+              <p><strong>Outliers:</strong> Titik-titik yang berada di luar whiskers, menandakan data yang signifikan secara ekstrem dari distribusi.</p>
+            </li>
+            <li>
+              <p><strong>Simetri:</strong> Jika median (garis di dalam kotak) berada di tengah kotak, dan jarak antara Q1 dan median serta Q3 dan median sekitar sama, grafik menunjukkan simetri.</p>
+            </li>
+            <li>
+              <p>
+                <strong>Cenderung Miring ke Kanan (Skewness ke Kanan):</strong> Jika median lebih dekat ke Q1 daripada ke Q3 (median lebih dekat ke "atas" kotak), dan rentang data di sebelah kanan (di atas kotak) lebih panjang daripada di
+                kiri (di bawah kotak), grafik cenderung miring ke kanan.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>Cenderung Miring ke Kiri (Skewness ke Kiri):</strong> Jika median lebih dekat ke Q3 daripada ke Q1 (median lebih dekat ke "bawah" kotak), dan rentang data di sebelah kiri (di bawah kotak) lebih panjang daripada di
+                kanan (di atas kotak), grafik cenderung miring ke kiri.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <h3>Membuat Diagram Batang dan Daun Menggunakan SPSS</h3>
+        <p>
+          1. Entri data kedalam Data View SPSS seperti tampilan dibawah ini. Data dapat di akses di link berikut
+          <a href="https://docs.google.com/spreadsheets/d/1v2-1oIfRwKud3DoO2S5ampjHCOEOlJcBhldMu5wQkAc/edit?usp=sharing" target="_blank"> Data </a>
+        </p>
+        <div class="img">
+          <img class="image" src="/img/boxplotspss1.png" alt="boxplotspss1" />
+        </div>
+        <p>2. Klik Graphs → Legacy Dialogs → pilih Boxplot. Seperti gambar dibawah ini.</p>
+        <div class="img">
+          <img class="image" src="/img/boxplotspss2.png" alt="boxplotspss2" />
+        </div>
+        <p>3. Setelah muncul tampilan menu Boxplot, pilih Simple dan di Data in Chart Are pilih Summaries of separate variables, lalu klik Define. Summaries of separate dipilih karena kita hanya bekerja dengan 1 variabel.</p>
+        <div class="img">
+          <img class="image" src="/img/boxplotspss3.png" alt="boxplotspss3" />
+        </div>
+
+        <p>4. Pilih variabel yang akan dibuat boxplotnya. Masukkan variabel tersebut ke kotak Boxes Represent dengan meng-klik tanda panah disamping kotak tersebut. Setalah itu klik Ok.</p>
+        <div class="img">
+          <img class="image" src="/img/boxplotspss4.png" alt="boxplotspss4" />
+        </div>
+
+        <p>5. Diagram kotak yang dihasilkan dari data tersebut ditampilkan pada Gambar dibawah ini.</p>
+        <div class="img">
+          <img class="plot" src="/img/boxplotspss5.jpeg" />
+        </div>
+
+        <h3>Membuat Multiple Boxplot Menggunakan SPSS</h3>
+        <p>Jika Anda memiliki beberapa variabel, SPSS juga dapat membuat beberapa plot kotak berdampingan. Misalnya, kita memiliki data berikut tentang poin rata-rata yang dicetak oleh 16 pemain di tiga tim berbeda:</p>
+        <p>
+          1. Entri data kedalam Data View SPSS seperti tampilan dibawah ini. Data dapat di akses di link berikut
+          <a href="https://docs.google.com/spreadsheets/d/1v2-1oIfRwKud3DoO2S5ampjHCOEOlJcBhldMu5wQkAc/edit?usp=sharing" target="_blank"> Data.</a>
+        </p>
+        <div class="img">
+          <img class="image" src="/img/boxplotspss6.png" alt="boxplotspss6" />
+        </div>
+
+        <p>2. Klik Analyze → Descriptive Statistics → Explore. Seperti gambar dibawah ini</p>
+        <div class="img">
+          <img class="image" src="/img/boxplotspss7.png" alt="boxplotspss7" />
+        </div>
+        <p>
+          3. Setelah muncul tampilan Explore. Masukkan semua variabel ke Dependent List dengan meng-klik tanda panah disamping kotak. Setelah itu klik Plots pada bagian disamping dan pada bagian Boxplot pilih Dependents together seperti
+          tampilan dibawah ini.
+        </p>
+        <div class="img">
+          <img class="image" src="/img/boxplotspss8.png" alt="boxplotspss8" />
+        </div>
+
+        <p>4. Setelah klik Ok maka muncul tampilan boxplot.</p>
+        <div class="img">
+          <img class="plot" src="/img/boxplotspss9.jpeg" alt="boxplotspss9" />
+        </div>
+        <h3>Interpretasi</h3>
+        <ul>
+          <li>
+            <p>Median poin yang tertinggi untuk tim B dan terendah untuk tim C.</p>
+          </li>
+          <li>
+            <p>Variasi jumlah poin yang paling tinggi terdapat pada tim B, terlihat dari seberapa panjang box plot mereka dibandingkan dengan tim A dan tim C.</p>
+          </li>
+          <li>
+            <p>Pemain dengan poin tertinggi per pertandingan ada di tim B dan pemain dengan poin terendah per pertandingan ada di tim C.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="other-articles">
+        <h3>Artikel Lainnya</h3>
+        <ul>
+          <li><a href="#">Pengantar Matematika Dasar</a></li>
+          <li><a href="#">Mengenal Jenis-jenis Data Statistik</a></li>
+          <li><a href="#">Cara Menghitung Mean, Median, dan Modus</a></li>
+
+          <!-- Anda dapat menambahkan lebih banyak artikel lain di sini -->
+        </ul>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p id="copyright">Copyright &copy; <span id="year"></span> By Simpel Academy</p>
+    </footer>
+
+    <script>
+      function toggleAnswer(answerId) {
+        var answerDiv = document.getElementById(answerId);
+        var button = answerDiv.previousElementSibling; // Mendapatkan tombol sebelum elemen jawaban
+        if (answerDiv.style.display === "none") {
+          answerDiv.style.display = "block";
+          button.textContent = "Sembunyikan Jawaban";
+        } else {
+          answerDiv.style.display = "none";
+          button.textContent = "Tampilkan Jawaban";
+        }
+      }
+
+      // Hamburge menu
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger-menu");
+        const navbar = document.querySelector(".navbar");
+
+        hamburger.addEventListener("click", function () {
+          navbar.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

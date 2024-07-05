@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF dan CDF dari Distribusi Normal</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a class="name-web">Simple Academy</a>
+      <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/statistika/index.html">Statistics</a></li>
+          <li><a href="/matematika/index.html">Matematics</a></li>
+          <li><a href="/sql/index.html">SQL</a></li>
+          <li><a href="/about/index.html">About</a></li>
+          <li><a href="/contact/index.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="wrapper">
+      <div class="related-articles">
+        <h3>Artikel Terkait</h3>
+        <ul>
+          <li><a href="#">Memahami Konsep Dasar Statistika</a></li>
+          <li><a href="#">Penerapan Statistika dalam Berbagai Bidang</a></li>
+          <!-- Anda dapat menambahkan lebih banyak artikel terkait di sini -->
+        </ul>
+      </div>
+
+      <div class="container-box">
+        <div class="path">
+          <a href="/index.html">Home</a> <span> >> </span> <a href="/statistika/index.html">Statistics</a> <span> >> </span>
+          <a href="distribusi_probabilitas.html">PDF dan CDF dari Distribusi Normal</a>
+        </div>
+        <h2 class="judul">PDF dan CDF dari Distribusi Normal</h2>
+        <div class="author-info">
+          <img src="/about/foto.JPG" alt="Foto Profil Penulis" class="author-avatar" />
+          <span class="author-name">Andi Ardiansyah Nasir</span>
+          <span class="post-date">5 Juli 2024</span>
+        </div>
+        <!-- <div class="img">
+          <img src="/img/normal_distribution.webp" alt="Distribusi Normal" />
+        </div> -->
+
+        <h3>1. Fungsi Kepadatan Peluang (PDF) dari Distribusi Normal</h3>
+        <p>
+          <strong>Fungsi Kepadatan Peluang (Probability Density Function, PDF)</strong> adalah fungsi yang menggambarkan kemungkinan relatif dari variabel acak kontinu untuk mengambil nilai tertentu. PDF menyediakan cara untuk memodelkan
+          distribusi probabilitas dari variabel acak kontinu.
+        </p>
+        <p>Fungsi Kepadatan Peluang (Probability Density Function, PDF) untuk distribusi normal dinyatakan dengan rumus:</p>
+        <p>\[ f(x|\mu, \sigma) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x - \mu)^2}{2\sigma^2}} \]</p>
+        <p>Di mana:</p>
+        <ul>
+          <li>\( x \) : Variabel acak</li>
+          <li>\( \mu \) : Mean (rata-rata)</li>
+          <li>\( \sigma \) : Standar deviasi</li>
+          <li>\( \pi \) : Konstanta Pi (sekitar 3.14159)</li>
+          <li>\( e \) : Basis dari logaritma natural (sekitar 2.71828)</li>
+        </ul>
+
+        <h3>2. Fungsi Distribusi Kumulatif (CDF) dari Distribusi Normal</h3>
+        <p>
+          Fungsi Distribusi Kumulatif (Cumulative Distribution Function, CDF) adalah fungsi yang menggambarkan kemungkinan bahwa variabel acak akan mengambil nilai kurang dari atau sama dengan nilai tertentu. CDF adalah integral dari PDF.
+        </p>
+        <p>Fungsi Distribusi Kumulatif (Cumulative Distribution Function, CDF) untuk distribusi normal adalah integral dari PDF dari minus tak terhingga hingga \( x \):</p>
+        <p>\[ F(x|\mu, \sigma) = \int_{-\infty}^x \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(t - \mu)^2}{2\sigma^2}} \, dt \]</p>
+        <p>CDF dari distribusi normal tidak memiliki bentuk tertutup yang sederhana dan biasanya dihitung menggunakan tabel atau fungsi khusus dalam perangkat lunak statistik.</p>
+
+        <h3>3. Contoh Soal Distribusi Normal</h3>
+        <h4>Soal 1: Menghitung PDF</h4>
+        <p>Misalkan \( X \) adalah variabel acak yang berdistribusi normal dengan mean \( \mu = 0 \) dan standar deviasi \( \sigma = 1 \). Hitunglah nilai PDF untuk \( x = 2 \).</p>
+        <p><strong>Langkah-langkah Penyelesaian:</strong></p>
+        <p>1. <strong>Tulis Rumus PDF</strong>:</p>
+        <p>\[ f(x|\mu, \sigma) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x - \mu)^2}{2\sigma^2}} \]</p>
+        <p>2. <strong>Substitusi Nilai yang Diketahui</strong>:</p>
+        <p>- Mean \( \mu = 0 \)</p>
+        <p>- Standar deviasi \( \sigma = 1 \)</p>
+        <p>- Nilai \( x = 2 \)</p>
+        <p>\[ f(2|0, 1) = \frac{1}{1 \sqrt{2\pi}} e^{-\frac{(2 - 0)^2}{2(1)^2}} \]</p>
+        <p>3. <strong>Hitung Eksponen</strong>:</p>
+        <p>- Hitung kuadrat dari (x - μ): \((2 - 0)^2 = 4\)</p>
+        <p>- Bagikan dengan \(2\sigma^2\): \(\frac{4}{2 \cdot 1^2} = 2\)</p>
+        <p>\[ f(2|0, 1) = \frac{1}{\sqrt{2\pi}} e^{-2} \]</p>
+        <p>4. <strong>Selesaikan Persamaan</strong>:</p>
+        <p>- Hitung \(\sqrt{2\pi}\): \(\sqrt{6.28318} \approx 2.50662\)</p>
+        <p>- Hitung \( e^{-2} \): \( e^{-2} \approx 0.13534 \)</p>
+        <p>\[ f(2|0, 1) \approx \frac{1}{2.50662} \cdot 0.13534 \]</p>
+        <p>\[ f(2|0, 1) \approx 0.05399 \]</p>
+        <p>Jadi, nilai PDF untuk \( x = 2 \) adalah sekitar 0.05399.</p>
+
+        <h4>Soal 2: Menghitung CDF</h4>
+        <p>Misalkan \( X \) adalah variabel acak yang berdistribusi normal dengan mean \( \mu = 50 \) dan standar deviasi \( \sigma = 10 \). Hitunglah probabilitas bahwa \( X \) kurang dari 60, yaitu \( P(X < 60) \).</p>
+        <p><strong>Langkah-langkah Penyelesaian:</strong></p>
+        <p>1. <strong>Standarisasi Variabel X</strong>:</p>
+        <p>- Gunakan rumus z-score: \( Z = \frac{X - \mu}{\sigma} \)</p>
+        <p>- Substitusi nilai: \( \mu = 50 \), \( \sigma = 10 \), dan \( X = 60 \)</p>
+        <p>\[ Z = \frac{60 - 50}{10} \]</p>
+        <p>\[ Z = 1 \]</p>
+        <p>2. <strong>Cari Probabilitas dari Z</strong>:</p>
+        <p>- Gunakan tabel distribusi normal standar atau perangkat lunak statistik untuk menemukan \( P(Z < 1) \)</p>
+        <p>- Berdasarkan tabel distribusi normal standar, kita temukan bahwa:</p>
+        <p>\[ P(Z < 1) \approx 0.8413 \]</p>
+        <p>Jadi, \( P(X < 60) \approx 0.8413 \).</p>
+
+        <h4>Soal 3: Menghitung Nilai Kritis</h4>
+        <p>Misalkan kita ingin menemukan nilai \( k \) sedemikian rupa sehingga \( P(X \leq k) = 0.95 \) untuk \( X \) yang berdistribusi normal dengan \( \mu = 100 \) dan \( \sigma = 15 \).</p>
+        <p><strong>Langkah-langkah Penyelesaian:</strong></p>
+        <p>1. <strong>Cari Nilai z dalam Distribusi Normal Standar</strong>:</p>
+        <p>- Berdasarkan tabel distribusi normal standar untuk \( P(Z \leq z) = 0.95 \):</p>
+        <p>\[ z \approx 1.645 \]</p>
+        <p>2. <strong>Transformasi Nilai z ke Skala X</strong>:</p>
+        <p>- Gunakan rumus: \( k = \mu + z \sigma \)</p>
+        <p>- Substitusi nilai: \( \mu = 100 \), \( \sigma = 15 \), dan \( z = 1.645 \)</p>
+        <p>\[ k = 100 + 1.645 \times 15 \]</p>
+        <p>\[ k \approx 100 + 24.675 \]</p>
+        <p>\[ k \approx 124.675 \]</p>
+        <p>Jadi, nilai \( k \) adalah sekitar 124.675.</p>
+
+        <h3>Kesimpulan</h3>
+        <p>
+          Distribusi normal merupakan fondasi penting dalam statistik yang digunakan untuk menggambarkan fenomena alamiah dan berbagai proses acak. Memahami PDF dan CDF dari distribusi normal membantu dalam analisis data dan pengambilan
+          keputusan berdasarkan probabilitas.
+        </p>
+      </div>
+
+      <div class="other-articles">
+        <h3>Artikel Lainnya</h3>
+        <ul>
+          <li><a href="#">Pengantar Matematika Dasar</a></li>
+          <li><a href="#">Mengenal Jenis-jenis Data Statistik</a></li>
+          <li><a href="#">Cara Menghitung Mean, Median, dan Modus</a></li>
+
+          <!-- Anda dapat menambahkan lebih banyak artikel lain di sini -->
+        </ul>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p id="copyright">Copyright &copy; <span id="year"></span> By Simpel Academy</p>
+    </footer>
+
+    <script>
+      function toggleAnswer(answerId) {
+        var answerDiv = document.getElementById(answerId);
+        var button = answerDiv.previousElementSibling; // Mendapatkan tombol sebelum elemen jawaban
+        if (answerDiv.style.display === "none") {
+          answerDiv.style.display = "block";
+          button.textContent = "Sembunyikan Jawaban";
+        } else {
+          answerDiv.style.display = "none";
+          button.textContent = "Tampilkan Jawaban";
+        }
+      }
+      // Hamburge menu
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger-menu");
+        const navbar = document.querySelector(".navbar");
+
+        hamburger.addEventListener("click", function () {
+          navbar.classList.toggle("active");
+        });
+      });
+
+      // bagian copy code
+      document.addEventListener("DOMContentLoaded", (event) => {
+        document.querySelectorAll(".copy-button").forEach((button) => {
+          button.addEventListener("click", () => {
+            const codeBlock = button.nextElementSibling.querySelector("code");
+            const range = document.createRange();
+            range.selectNode(codeBlock);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+
+            try {
+              document.execCommand("copy");
+              button.textContent = "Copied!";
+              setTimeout(() => {
+                button.textContent = "Copy";
+              }, 2000);
+            } catch (err) {
+              console.error("Failed to copy text: ", err);
+            }
+
+            window.getSelection().removeAllRanges();
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -306,6 +306,10 @@ header .name-web {
   color: #222;
 }
 
+.container-box ul li {
+  margin-left: 20px;
+}
+
 /* Bagian Question */
 .choices {
   margin-bottom: 10px;
