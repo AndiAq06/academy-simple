@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bias dan Variance dalam Machine Learning</title>
+    <title>Pengantar Distribusi Uniform</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -44,79 +44,73 @@
       <div class="container-box">
         <div class="path">
           <a href="/index.html">Home</a> <span> >> </span> <a href="/statistika/index.html">Statistics</a> <span> >> </span>
-          <a href="/statistika/parametrik_nonparametrik.html">Bias dan Variance dalam Machine Learning</a>
+          <a href="distribusi_probabilitas.html">Ide-Ide Utama di Balik Distribusi Uniform</a>
         </div>
-        <h2 class="judul">Memahami Bias dan Variance dalam Machine Learning</h2>
+        <h2 class="judul">Ide-Ide Utama di Balik Distribusi Uniform</h2>
         <div class="author-info">
           <img src="/about/foto.JPG" alt="Foto Profil Penulis" class="author-avatar" />
           <span class="author-name">Andi Ardiansyah Nasir</span>
-          <span class="post-date">02 Juli 2024</span>
+          <span class="post-date">7 Juli 2024</span>
         </div>
+        <!-- <div class="img">
+          <img src="/img/probabiity-distributions_1.webp" alt="probabiity-distributions_1" />
+        </div> -->
+        <h3>1. Pengertian Distribusi Probabilitas</h3>
         <p>
-          Dalam machine learning, konsep bias dan variance adalah dua komponen utama yang mempengaruhi performa model. Memahami dan mengelola bias serta variance adalah kunci untuk membangun model yang dapat menghasilkan prediksi yang
-          akurat dan dapat diandalkan. Artikel ini akan menjelaskan apa itu bias dan variance, bagaimana keduanya mempengaruhi model machine learning, serta strategi untuk mengoptimalkan keseimbangan antara keduanya.
+          Dalam statistik, distribusi uniform merujuk pada jenis distribusi probabilitas di mana semua hasil memiliki kemungkinan yang sama. Distribusi probabilitas digunakan untuk menentukan kemungkinan yang terjadinya suatu peristiwa di
+          masa depan.
+        </p>
+        <p>Contoh sederhana adalah setumpuk kartu. Peluang untuk menarik hati, klub, wajik, atau sekop adalah sama. Begitu juga dengan lemparan koin; peluang untuk mendapatkan kepala atau ekor adalah sama, yaitu 50%.</p>
+        <p>
+          Distribusi uniform dapat divisualisasikan sebagai garis horizontal lurus untuk lembaran koin, kepala atau ekor yang mana masing-masing memiliki probabilitas 50% terjadi dan dapat digambarkan pada grafik dengan garis atau sumbu y
+          pada 0,5.
         </p>
 
-        <h3>Apa itu Bias dalam Machine Learning ?</h3>
+        <h3>Distribusi Uniform Diskrit</h3>
         <p>
-          Bias mengacu pada kesalahan yang dihasilkan oleh asumsi-asumsi yang ada dalam model machine learning. Bias tinggi terjadi ketika model terlalu sederhana dan tidak mampu menangkap kompleksitas dari data. Ini sering disebut sebagai
-          underfitting. Model yang mengalami underfitting biasanya memiliki performa buruk baik pada data pelatihan maupun data uji.
-        </p>
-        <h4>Contoh Bias Tinggi</h4>
-        <p>
-          Misalkan kita memiliki data yang menunjukkan hubungan non-linear antara dua variabel, tetapi kita menggunakan model linear (misalnya regresi linear sederhana). Model ini akan gagal menangkap pola non-linear yang ada dalam data,
-          sehingga menghasilkan prediksi yang buruk.
+          Hasil yang mungkin dari melempar dadu memberikan contoh distribusi uniform diskrit. Kemungkinan keluar 1, 2, 3, 4, 5, atau 6, tetapi tidak mungkin keluar 2,3, 4,7, atau 5,5. Oleh karena itu, lemparan dadu menghasilkan distribusi
+          diskrit dengan probabilitas 1/6 untuk setiap hasil. Hanya ada 6 nilai yang mungkin keluar dan tidak ada di antaranya. Kemungkinan-kemungkinan ini terbatas.
         </p>
 
-        <h3>Apa itu Variance dalam Machine Learning ?</h3>
+        <h3>Distribusi Uniform Kontinu</h3>
         <p>
-          Variance mengacu pada sensitivitas model terhadap fluktuasi dalam data pelatihan. Variance tinggi terjadi ketika model terlalu kompleks dan menangkap noise dari data pelatihan, yang mengakibatkan performa buruk pada data uji. Ini
-          sering disebut sebagai overfitting. Model yang mengalami overfitting biasanya menunjukkan performa sangat baik pada data pelatihan namun buruk pada data uji.
-        </p>
-        <h4>Contoh Varianve Tinggi</h4>
-        <p>
-          Jika kita menggunakan model yang sangat kompleks (misalnya, pohon keputusan dengan kedalaman yang sangat tinggi) untuk data yang sebenarnya sederhana, model ini akan terlalu menyesuaikan diri dengan data pelatihan, termasuk noise
-          atau anomali, sehingga gagal dalam generalisasi ke data baru.
+          Di sisi lain, distribusi uniform kontinu memiliki kemungkinan distribusi yang tak terbatas. Penghasil angka acak yang ideal dianggap sebagai distribusi uniform kontinu. Dengan jenis distribusi ini, setiap titik dalam rentang
+          kontinu antara 0,0 dan 1,0 memiliki peluang yang sama untuk muncul, namun ada jumlah titik yang tak terbatas antara 0,0 dan 1,0.
         </p>
 
-        <h3>Trade-off antara Bias dan Variance</h3>
+        <h3>Visualisasi Distribusi Uniform</h3>
         <p>
-          Dalam machine learning, ada trade-off antara bias dan variance. Meningkatkan kompleksitas model akan mengurangi bias tetapi meningkatkan variance, dan sebaliknya. Tujuan utama adalah menemukan keseimbangan yang tepat di antara
-          keduanya untuk meminimalkan total error (kesalahan total).
+          Distribusi adalah cara sederhana untuk memvisualisasikan satu set data. Hal ini dapat ditampilkan sebagai grafik atau daftar, dan mengungkapkan nilai-nilai variabel acak yang memiliki kemungkinan lebih rendah atau lebih tinggi
+          untuk terjadi. Distribusi uniform mungkin adalah yang paling sederhana dari semua distribusi probabilitas.
         </p>
-
-        <ul>
-          <li>
-            <p><strong>Bias tinggi dan variance rendah:</strong> Model sederhana yang cenderung underfitting.</p>
-          </li>
-          <li>
-            <p><strong>Bias rendah dan variance tinggi:</strong> Model kompleks yang cenderung overfitting.</p>
-          </li>
-          <li>
-            <p><strong>Bias dan variance seimbang:</strong> Model yang mampu generalisasi dengan baik ke data baru.</p>
-          </li>
-        </ul>
-
+        <p>
+          Dalam distribusi uniform, setiap nilai dalam set nilai yang mungkin memiliki kemungkinan yang sama untuk terjadi. Ketika ditampilkan sebagai grafik batang atau garis, distribusi ini memiliki tinggi yang sama untuk setiap hasil
+          yang mungkin. Dengan cara ini, dapat terlihat seperti persegi panjang dan oleh karena itu kadang-kadang digambarkan sebagai distribusi persegi panjang.
+        </p>
+        <p>
+          Lemparan dadu menghasilkan salah satu dari enam angka: 1, 2, 3, 4, 5, atau 6. Karena hanya ada 6 hasil yang mungkin, probabilitas Anda mendapatkan salah satu dari mereka adalah 16,67% (1/6). Ketika diplotkan pada grafik,
+          distribusi ini diwakili sebagai garis horizontal, dengan setiap hasil yang mungkin terletak pada sumbu x, pada titik probabilitas tetap sepanjang sumbu y.
+        </p>
         <div class="img">
-          <img src="/img/bias_variance.png" alt="image" />
+          <img src="/img/uniform.webp" alt="uniform-distributions" />
         </div>
 
-        <h3>Teknik Mengelola Bias dan Variance</h3>
-
-        <h4>1. Cross-Validation</h4>
-        <p>Menggunakan teknik cross-validation seperti k-fold cross-validation dapat membantu mengevaluasi performa model dengan lebih baik dan mencegah overfitting.</p>
-
-        <h4>2. Regularisasi</h4>
-        <p>Regularisasi (misalnya L1, L2) menambahkan penalti terhadap kompleksitas model, yang dapat membantu mengurangi variance tanpa meningkatkan bias secara signifikan.</p>
-
-        <h4>3. Ensemble Methods</h4>
-        <p>Metode ensemble seperti bagging (misalnya Random Forest) dan boosting (misalnya AdaBoost) mengkombinasikan beberapa model untuk mengurangi variance tanpa menambah bias secara signifikan.</p>
-
-        <h3>Kesimpulan</h3>
+        <h3>Contoh Distribusi Uniform</h3>
         <p>
-          Memahami dan mengelola bias serta variance adalah kunci dalam pengembangan model machine learning yang efektif. Dengan menggunakan teknik yang tepat untuk menyeimbangkan keduanya, kita dapat membangun model yang memiliki performa
-          baik dan mampu melakukan generalisasi dengan baik terhadap data baru. Dengan demikian, model tidak hanya akan bekerja dengan baik pada data pelatihan tetapi juga pada data yang belum pernah dilihat sebelumnya.
+          Terdapat 52 kartu dalam setumpuk kartu tradisional. Juga dalam setumpuk itu terdapat empat jenis: hati, wajik, klub, dan sekop. Setiap jenis berisi A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K. Setumpuk kartu juga mengandung 2 joker.
+          Namun, kita akan mengabaikan joker dan kartu bergambar untuk contoh ini, dan hanya fokus pada kartu angka yang direplikasi di setiap jenis. Akibatnya, kita memiliki 40 kartu, satu set data diskrit.
         </p>
+        <p>
+          Misalkan Anda ingin mengetahui probabilitas menarik 2 hati dari setumpuk kartu yang dimodifikasi. Probabilitas menarik 2 hati adalah 1/40 atau 2,5%. Setiap kartu adalah unik; oleh karena itu, kemungkinan Anda menarik salah satu
+          dari kartu dalam setumpuk adalah.
+        </p>
+        <p>
+          Sekarang, mari kita pertimbangkan kemungkinan menarik satu kartu hati dari setumpuk. Probabilitasnya jauh lebih tinggi. Mengapa? Sekarang kita hanya memperhatikan jenis kartu dalam setumpuk. Karena hanya ada empat jenis, menarik
+          satu kartu hati menghasilkan probabilitas 1/4 atau 25%.
+        </p>
+        <div class="img">
+          <img src="/img/uniform_1.jpeg" alt="uniform-distributions" />
+        </div>
       </div>
 
       <div class="other-articles">

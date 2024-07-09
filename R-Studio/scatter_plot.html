@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Membuat Pie-Chart Menggunakan R-Studio</title>
+    <title>Membuat Scatter Plot Menggunakan R-Studio</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -44,164 +44,152 @@
           <a href="/index.html">Home</a> <span> >> </span> <a href="/statistika/index.html">Statistics</a> <span> >> </span>
           <a href="/statistika/parametrik_nonparametrik.html">R-Studio</a>
         </div>
-        <h2 class="judul">Membuat Pie-Chart Menggunakan R-Studio</h2>
+        <h2 class="judul">Membuat Scatter Plot Menggunakan R-Studio</h2>
         <div class="author-info">
           <img src="/about/foto.JPG" alt="Foto Profil Penulis" class="author-avatar" />
           <span class="author-name">Andi Ardiansyah Nasir</span>
-          <span class="post-date">4 Juli 2024</span>
+          <span class="post-date">8 juli 2024</span>
         </div>
 
-        <div class="img">
-          <img src="/img/pie5.png" alt="image" />
-        </div>
+        <!-- <div class="img">
+          <img src="/img/barplot6.png" alt="image" />
+        </div> -->
 
         <div class="introduction">
-          <h3>Pengertian Pie-Chart</h3>
+          <h3>Pengertian Scatter Plot</h3>
           <p>
-            Pie chart, atau dalam bahasa Indonesia sering disebut dengan "diagram lingkaran", adalah jenis grafik yang menampilkan data dalam bentuk lingkaran yang terbagi menjadi beberapa "iris" atau "slices". Setiap iris mewakili proporsi
-            atau persentase dari keseluruhan data. Diagram ini berguna untuk memvisualisasikan bagaimana setiap bagian berkontribusi terhadap keseluruhan.
+            Scatter Plot adalah jenis grafik yang digunakan untuk memvisualisasikan hubungan antara dua variabel numerik dalam bentuk titik-titik yang tersebar di dalam bidang. Setiap titik mewakili sepasang nilai dari dua variabel yang
+            berbeda. Tujuan utamanya untuk menunjukkan pola atau hubungan antara dua variabel.
           </p>
-          <p>
-            Kelebihan dari Pie Charts ini adalah Mudah dipahami, efektif dalam menampilkan proporsi relatif secara visual. Sedangkan Keterbatasannya adalah Kurang cocok untuk data yang kompleks atau memiliki banyak kategori, sulit jika
-            terlalu banyak iris dalam satu diagram.
-          </p>
-          <h4>Kegunaan Pie Charts</h4>
-          <ol>
+          <h4>Tujuan Scatter Plot</h4>
+          <ul>
             <li>
-              <p><strong>Visualisasi Proporsi:</strong> Memberikan gambaran visual tentang bagaimana bagian-bagian menyumbang terhadap total keseluruhan.</p>
+              <p>Scatter Plot membantu dalam memvisualisasikan hubungan atau korelasi antara dua variabel. Ini dapat membantu dalam menentukan apakah ada hubungan antar keduanya.</p>
             </li>
             <li>
-              <p><strong>Perbandingan Proporsi:</strong>Memungkinkan perbandingan antara bagian-bagian yang membentuk keseluruhan.</p>
+              <p>Scatter Plot dapat digunakan untuk melihat apakah ada pola tertentu dalam distribusi titik-titik, seperti pola linear,pola non-linear, atau ketiadaan pola.</p>
             </li>
-            <li>
-              <p><strong>Menyoroti Bagian Penting: </strong>Membantu dalam menyoroti bagian yang signifikan dalam konteks keseluruhan data.</p>
-            </li>
-          </ol>
+          </ul>
+          <h3>Pola Scatter Plot</h3>
+          <p><strong>Korelasi Positif:</strong> Jika titik-titik cenderung bergerak dari kiri bawah ke kanan atas, maka ada kemungkinan terdapat korelasi positif antara kedua variabel.</p>
+          <div class="img">
+            <img src="/img/scatter1.png" alt="image scatter 1" />
+          </div>
+          <p><strong>Korelasi Negatif:</strong> Jika titik-titik cenderung bergerak dari kiri atas ke kanan bawah, maka ada kemungkinan terdapat korelasi negatif antara kedua variabel.</p>
+          <div class="img">
+            <img src="/img/scatter2.png" alt="image scatter 2" />
+          </div>
+          <p><strong>Tidak Ada Korelasi:</strong> Jika titik-titik tersebar acak di seluruh plot tanpa pola khusus, ini menunjukkan bahwa kedua variabel tersebut mungkin tidak memiliki hubungan.</p>
+          <div class="img">
+            <img src="/img/scatter3.png" alt="image scatter 3" />
+          </div>
         </div>
 
-        <div class="code">
-          <h4>R- Pie Charts</h4>
-          <p>Pie Charts dibuat di R menggunakan Fungsi <span>pie()</span></p>
+        <div class="code" style="margin-top: 5px">
+          <p>Scatter Plot dibuat di R menggunakan Fungsi <strong>plot()</strong></p>
           <div class="box">
-            <span>Sintaks:</span> <code>pie(x,labels, radius,main,col,clockwise)</code>
+            <span>Sintaks:</span> <code>plot(x, y, main, xlab, ylab, xlim, ylim, axes)</code>
             <h4>Parameters</h4>
             <ul>
               <li>
-                <p><span>labels:</span> P Parameter ini memberikan deskripsi atau label untuk setiap iris/slice dalam pie chart.</p>
+                <p><strong>x:</strong> Parameter ini menetapkan koordinat horizontal/variabel pertama.</p>
               </li>
               <li>
-                <p>
-                  <span>radius:</span> Parameter ini menunjukkan jari-jari lingkaran pada pie chart. Nilainya berkisar antara -1 dan +1, mengatur ukuran lingkaran dalam hubungannya dengan ruang tampilan, di mana nilai positif menandakan
-                  ukuran yang lebih besar.
-                </p>
+                <p><strong>y:</strong> Parameter ini menetapkan koordinat vertikal/variabel kedua.</p>
               </li>
               <li>
-                <p><span>main:</span> Parameter ini merupakan judul atau title dari pie chart yang akan ditampilkan di bagian atas diagram.</p>
+                <p><strong>xlab:</strong> Parameter ini adalah label untuk sumbu horizontal (sumbu x) pada scatter plot.</p>
               </li>
               <li>
-                <p><span>col:</span>Parameter ini memberikan warna pada iris atau slice dalam grafik pie.</p>
+                <p><strong>ylab:</strong> Parameter ini adalah label untuk sumbu vertikal (sumbu y) pada scatter plot.</p>
               </li>
               <li>
-                <p><span>clockwise:</span> Parameter ini berisi nilai logika yang menentukan apakah irisan pie chart digambar searah jarum jam (clockwise) atau berlawanan arah jarum jam (anti-clockwise).</p>
+                <p><strong>main:</strong> Parameter main adalah judul dari grafik scatter plot.</p>
+              </li>
+              <li>
+                <p><strong>xlim:</strong> Parameter ini digunakan untuk plotting nilai-nilai x.</p>
+              </li>
+              <li>
+                <p><strong>ylim:</strong> Parameter ini digunakan untuk plotting nilai-nilai y.</p>
+              </li>
+              <li>
+                <p><strong>axes:</strong> Parameter ini menunjukkan apakah kedua sumbu harus digambar pada plot.</p>
               </li>
             </ul>
           </div>
         </div>
 
         <div class="dataset">
-          <h3>Simple Pie-Chart</h3>
+          <h3>Simple Scatter Plot pada R</h3>
+          <p>Membuat Scatter Plot menggunakan data set "mtcars" dengan variabel "wt" dan "mpg".</p>
           <div class="code-block">
             <button class="copy-button">Copy</button>
             <pre><code class="language-r">
-# Data contoh
-values <- c(40, 30, 20, 10)
-labels <- c("A", "B", "C", "D")
-
-# Membuat simple pie chart
-pie(values, labels = labels, main = "Simple Pie Chart")</code></pre>
-          </div>
-          <div class="img">
-            <img class="img" src="/img/pie1.jpeg" />
+input <- mtcars
+print(head(input))</code></pre>
           </div>
         </div>
 
         <div class="dataset">
-          <h3>Pie-Chart dengan Warna</h3>
-          <p>Membuat Bar-Chart Horizontal dengan menambahkan horiz = TRUE</p>
+          <h3>Membuat Scatter Plot</h3>
           <div class="code-block">
             <button class="copy-button">Copy</button>
             <pre><code class="language-r">
-# Data contoh
-values <- c(40, 30, 20, 10)
-labels <- c("Avanza", "Toyota", "Ferrari", "Lamborgini")
+# Input Data
+input <- mtcars[, c('wt', 'mpg')]
 
-# Membuat simple pie chart
-pie(values, labels = labels, main = "Car Pie Chart", col = rainbow(length(values)))</code></pre>
+# Membuat Scatter Plot
+plot(x = input$wt, y = input$mpg,
+    xlab = "Weight",
+    ylab = "Milage",
+    main = "Weight vs Milage")</code></pre>
           </div>
           <div class="img">
-            <img class="img" src="/img/pie2.jpeg" />
+            <img class="img" src="/img/scatter4.jpeg" />
           </div>
+        </div>
+        <div class="dataset">
+          <h3>Scatterplot Matriks</h3>
+          <p>Ketika kita memiliki dua atau lebih variabel dan kita ingin melihat korelasi antara satu variabel dengan variabel lain kita menggunakan scatter plot matiks.</p>
+          <div class="code" style="margin-top: 5px">
+            <div class="box">
+              <span>Sintaks:</span> <code>pairs(formula,data)</code>
+              <h4>Parameters</h4>
+              <ul>
+                <li>
+                  <p><strong>formula:</strong> Parameter ini mewakili rangkaian variabel yang digunakan secara berpasangan.</p>
+                </li>
+                <li>
+                  <p><strong>data:</strong> Parameter ini mewakili set data dari mana variabel-variabel akan diambil.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p>Dapat dilihat dibawah ini cara membuat scatterplot matriks</p>
+          <div class="code-block">
+            <button class="copy-button">Copy</button>
+            <pre><code class="language-r">
+pairs(~wt + mpg + disp + cyl, data = mtcars, main = "Scatterplot Matrix")</code></pre>
+          </div>
+          <div class="img">
+            <img src="/img/scatter5.jpeg" />
+          </div>
+          <p>"~wt + mpg + disp + cyl" menunjukkan bahwa kita ingin membuat matriks scatterplot yang membandingkan hubungan antara variabel 'wt', 'mpg', 'disp', dan 'cyl' dari dataset 'mtcars'</p>
         </div>
 
         <div class="dataset">
-          <h3>Persentase Slice & Chart Legenda</h3>
-          <p>Ada dua properti lagi dari diagram lingkaran: persentase irisan dan legenda grafik. Kita dapat menampilkan grafik dalam bentuk persentase serta menambahkan legenda.</p>
+          <h3>3D Scatter Plot</h3>
+          <p>Pada bagian terakhir ini kita akan mencoba membuat 3D scatter plot menggunakan <span>plot_ly()</span> dalam package <span>plotly</span></p>
           <div class="code-block">
             <button class="copy-button">Copy</button>
             <pre><code class="language-r">
-# Data contoh
-values <- c(40, 30, 20, 10)
-labels <- c("Avanza", "Toyota", "Ferrari", "Lamborgini")
-
-piepercent<- round(100 * values / sum(values), 1)
-
-# Plot the chart.
-pie(values, labels = piepercent,
-    main = "City pie chart", col = rainbow(length(values)))
-legend("topright",  c("Avanza", "Toyota", "Ferrari", "Lamborgini"), cex = 0.5, fill = rainbow(length(values)))</code></pre>
+library(plotly)
+data <- mtcars
+plot_ly(data, x = ~mpg, y = ~hp, z = ~cyl, color = ~gear, type = "scatter3d", mode = "markers")</code></pre>
           </div>
           <div class="img">
-            <img src="/img/pie3.jpeg" />
+            <img src="/img/scatter6.jpeg" />
           </div>
-        </div>
-
-        <div class="dataset">
-          <h3>3D Pie Chart</h3>
-          <p>Di sini kita akan membuat diagram lingkaran 3D menggunakan <span>library plotrix</span> dan kemudian kita akan menggunakan fungsi pie3D() untuk memplot plot 3D.</p>
-          <div class="code-block">
-            <button class="copy-button">Copy</button>
-            <pre><code class="language-r">
-# Get the library.
-library(plotrix)
-
-#Data Contoh
-values <- c(40, 30, 20, 10)
-labels <- c("Avanza", "Toyota", "Ferrari", "Lamborgini")
-
-piepercent<- round(100 * values / sum(values), 1)
-
-# Plot the chart.
-pie3D(values, labels = piepercent,
-    main = "City pie chart", col = rainbow(length(values)))
-legend("topright",  c("Avanza", "Toyota", "Ferrari", "Lamborgini"), cex = 0.5, fill = rainbow(length(values)))</code></pre>
-          </div>
-          <div class="img">
-            <img src="/img/pie4.jpeg" />
-          </div>
-        </div>
-
-        <div class="related-post">
-          <h2>Related Post</h2>
-          <ul>
-            <li>
-              <span class="material-symbols-outlined"> library_books </span>
-              <a href="/R-Studio/boxplot.html">Membuat Boxplot Menggunakan R-Studio</a>
-            </li>
-            <li>
-              <span class="material-symbols-outlined"> library_books </span>
-              <a href="/R-Studio/histogram.html">Membuat Histogram Menggunakan R-Studio</a>
-            </li>
-          </ul>
         </div>
       </div>
 
