@@ -56,13 +56,6 @@
       yearElement.textContent = currentYear;
 
       document.addEventListener("DOMContentLoaded", function () {
-        if (/Mobi|Android/i.test(navigator.userAgent)) {
-          var notification = document.getElementById("mobile-notification");
-          notification.style.display = "block";
-        }
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
         const hamburger = document.querySelector(".hamburger-menu");
         const navbar = document.querySelector(".navbar");
 
